@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="toDO.css">
+
+</head>
+
+<body>
+    <div id="table1">
+        <table class="r1">
+            <tr>
+                <td><a id="mg">MAGIC NOTES</a></td>
+                <td><a id="home"></a></td>
+                <td><input type="text" id="scr" placeholder=".."></td>
+                <td><button id="srcbt">SEARCH</button></td>
+            </tr>
+            <tr>
+        </table>
+    </div>
+
+    <h1>WELCOME !!</h1>
+
+    <div id="table1">
+        <table>
+            <tr>
+                <td>Add tittle:</td>
+            </tr>
+            <tr>
+                <td><textarea id="txt_area1" rows="1" cols="80"></textarea></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td>
+                    <p>Add a note:</p>
+                </td>
+            </tr>
+            <tr>
+                <td><textarea id="txt_area2" rows="4" cols="100"></textarea></td>
+            </tr>
+            <tr>
+                <td><button onclick="additem()">Add Note</button></td>
+            </tr>
+        </table>
+    </div>
+
+                    <h2>Your MAGIC NOTES:</h2>
+
+
+            <h4 id="error"></h4>
+            <div id="box">
+                <div id="in">
+                   <h3 id="title"></h3>
+                    <p id="value"></p>
+                </div>
+            </div>
+            <button id="del" onclick="clearall()">Delete</button>
+    </div>
+    </a>
+
+</body>
+
+<script>
+    function clearall(){
+    window.parent.location = window.parent.location.href;
+}
+    function additem(){
+        let title = document.getElementById("txt_area1").value;
+        let val = document.getElementById("txt_area2").value;
+        if (title=='') {
+            document.getElementById("error").innerHTML="Please enter values";
+        }else {
+            let box = document.getElementById('box');
+            let li3 = document.createElement('in');
+            let li = document.createElement('li');
+            li.textContent = "➳ " + title;
+            box.appendChild(li);
+
+            let li2 = document.createElement('li2');
+            li2.textContent = "    " + val;
+            box.appendChild(li2);
+
+            let but = document.createElement('but');
+        }
+    }
+</script>
+
+
+
+</html>
